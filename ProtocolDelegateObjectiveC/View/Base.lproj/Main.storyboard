@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-fQ-65l">
+                                <rect key="frame" x="114" y="94" width="186" height="30"/>
+                                <state key="normal" title="Go to Child View Controller"/>
+                                <connections>
+                                    <action selector="didTapGoToChild:" destination="BYZ-38-t0r" eventType="touchUpInside" id="za7-qu-g5d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message from Child View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i19-mp-fP2">
+                                <rect key="frame" x="70" y="495" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i19-mp-fP2" firstAttribute="top" secondItem="4Sh-fQ-65l" secondAttribute="bottom" constant="371" id="04e-hw-twU"/>
+                            <constraint firstItem="i19-mp-fP2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J5c-qE-6uG"/>
+                            <constraint firstItem="4Sh-fQ-65l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oi9-MY-tQ6"/>
+                            <constraint firstItem="4Sh-fQ-65l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="t6r-hZ-Vlm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageFromChildLabel" destination="i19-mp-fP2" id="LaQ-ra-Ap1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="122"/>
+        </scene>
+        <!--Child View Controller-->
+        <scene sceneID="RIJ-Pi-NPk">
+            <objects>
+                <viewController storyboardIdentifier="ChildViewController" id="ikh-tq-KuO" customClass="ChildViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jLG-ot-WTG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PPu-fS-7Oh">
+                                <rect key="frame" x="50" y="343" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU4-MO-gx1">
+                                <rect key="frame" x="115.5" y="782" width="183" height="30"/>
+                                <state key="normal" title="Go to Main View Controller"/>
+                                <connections>
+                                    <action selector="didTapGoToMainViewController:" destination="ikh-tq-KuO" eventType="touchUpInside" id="E0O-sm-qo8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jDW-bJ-bUp" firstAttribute="bottom" secondItem="SU4-MO-gx1" secondAttribute="bottom" constant="50" id="1wV-4Y-DRT"/>
+                            <constraint firstItem="SU4-MO-gx1" firstAttribute="top" secondItem="PPu-fS-7Oh" secondAttribute="bottom" constant="405" id="I8l-KR-AjK"/>
+                            <constraint firstItem="PPu-fS-7Oh" firstAttribute="centerX" secondItem="jLG-ot-WTG" secondAttribute="centerX" id="VXR-NH-KSt"/>
+                            <constraint firstItem="PPu-fS-7Oh" firstAttribute="leading" secondItem="jDW-bJ-bUp" secondAttribute="leading" constant="50" id="dHL-fx-ctS"/>
+                            <constraint firstItem="jDW-bJ-bUp" firstAttribute="trailing" secondItem="PPu-fS-7Oh" secondAttribute="trailing" constant="50" id="neE-ea-I9g"/>
+                            <constraint firstItem="SU4-MO-gx1" firstAttribute="centerX" secondItem="jLG-ot-WTG" secondAttribute="centerX" id="ufM-9y-qyk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jDW-bJ-bUp"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="PPu-fS-7Oh" id="s4X-Gp-08l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqa-z4-kkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="122"/>
+        </scene>
+    </scenes>
+</document>

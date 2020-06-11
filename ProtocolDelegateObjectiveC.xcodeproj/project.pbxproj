@@ -17,6 +17,7 @@
 		6466D84C2492650C0004A96C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6466D84B2492650C0004A96C /* main.m */; };
 		6466D8562492650C0004A96C /* ProtocolDelegateObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6466D8552492650C0004A96C /* ProtocolDelegateObjectiveCTests.m */; };
 		6466D8612492650C0004A96C /* ProtocolDelegateObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6466D8602492650C0004A96C /* ProtocolDelegateObjectiveCUITests.m */; };
+		6466D8702492659F0004A96C /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6466D86F2492659F0004A96C /* ChildViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		6466D85C2492650C0004A96C /* ProtocolDelegateObjectiveCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtocolDelegateObjectiveCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6466D8602492650C0004A96C /* ProtocolDelegateObjectiveCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolDelegateObjectiveCUITests.m; sourceTree = "<group>"; };
 		6466D8622492650C0004A96C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6466D86E2492659F0004A96C /* ChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		6466D86F2492659F0004A96C /* ChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +109,13 @@
 		6466D8352492650A0004A96C /* ProtocolDelegateObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				6466D872249267440004A96C /* Controller */,
+				6466D871249267370004A96C /* View */,
 				6466D8362492650A0004A96C /* AppDelegate.h */,
 				6466D8372492650A0004A96C /* AppDelegate.m */,
 				6466D8392492650A0004A96C /* SceneDelegate.h */,
 				6466D83A2492650A0004A96C /* SceneDelegate.m */,
-				6466D83C2492650A0004A96C /* ViewController.h */,
-				6466D83D2492650A0004A96C /* ViewController.m */,
-				6466D83F2492650A0004A96C /* Main.storyboard */,
 				6466D8452492650C0004A96C /* Assets.xcassets */,
-				6466D8472492650C0004A96C /* LaunchScreen.storyboard */,
 				6466D84A2492650C0004A96C /* Info.plist */,
 				6466D84B2492650C0004A96C /* main.m */,
 				6466D8422492650A0004A96C /* ProtocolDelegateObjectiveC.xcdatamodeld */,
@@ -138,6 +139,26 @@
 				6466D8622492650C0004A96C /* Info.plist */,
 			);
 			path = ProtocolDelegateObjectiveCUITests;
+			sourceTree = "<group>";
+		};
+		6466D871249267370004A96C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6466D83F2492650A0004A96C /* Main.storyboard */,
+				6466D8472492650C0004A96C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6466D872249267440004A96C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6466D83C2492650A0004A96C /* ViewController.h */,
+				6466D83D2492650A0004A96C /* ViewController.m */,
+				6466D86E2492659F0004A96C /* ChildViewController.h */,
+				6466D86F2492659F0004A96C /* ChildViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +296,7 @@
 				6466D8382492650A0004A96C /* AppDelegate.m in Sources */,
 				6466D8442492650A0004A96C /* ProtocolDelegateObjectiveC.xcdatamodeld in Sources */,
 				6466D83B2492650A0004A96C /* SceneDelegate.m in Sources */,
+				6466D8702492659F0004A96C /* ChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
